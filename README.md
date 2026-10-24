@@ -48,8 +48,14 @@ The five tools are Hill, Mud, Boulders, Ramp, and Bend road. Each has its own co
 
 ## Running it
 
-The whole game is one file, `index.html`. Open it in a browser and play. There's no build step.
+**Play it at [off-course-game.vercel.app](https://off-course-game.vercel.app).**
 
-To host it for free, turn on GitHub Pages: go to **Settings → Pages**, set the source to the `main` branch at the root, and save. The game will then be live at `https://<your-username>.github.io/off-course-game/`.
+The whole game lives in `index.html`; the other files at the root are the favicon, app icons, and web manifest. To run it locally, open `index.html` in a browser. There's no build step.
+
+The site is deployed on Vercel as a static site with no framework, and every push to `main` deploys automatically.
+
+### Analytics
+
+The site uses [Vercel Web Analytics](https://vercel.com/docs/analytics) through the plain HTML snippet in `index.html`. The script only loads when the site is deployed on Vercel with Web Analytics enabled for the project. Opened locally, the request 404s and nothing breaks.
 
 The game loads [three.js](https://threejs.org/) r128 from cdnjs and the Archivo font from Google Fonts, so it needs an internet connection the first time it loads.
